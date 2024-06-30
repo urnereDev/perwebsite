@@ -6,7 +6,11 @@ class NavigationBarWidget extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
+      padding: EdgeInsets.only(right: 40),
       height: 100,
+      decoration: BoxDecoration(
+          color: Color(0xff151515),
+          borderRadius: BorderRadius.vertical(top: Radius.circular(15))),
       child: Row(
         mainAxisAlignment: MainAxisAlignment.spaceBetween,
         children: [
@@ -22,7 +26,7 @@ class NavigationBarWidget extends StatelessWidget {
                 title: "Home",
               ),
               SizedBox(
-                width: 60,
+                width: 40,
               ),
               _navBarItem(title: "About")
             ],
@@ -42,7 +46,12 @@ class _navBarItem extends StatelessWidget {
   Widget build(BuildContext context) {
     return Text(
       title,
-      style: TextStyle(fontSize: 18),
+      style: TextStyle(
+          fontSize: 18,
+          color: Color(0xffB4A5A5),
+          decoration: TextDecoration.none,
+          fontFamily: "Poppins",
+          fontWeight: FontWeight.w800),
     );
   }
 }

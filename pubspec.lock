@@ -75,6 +75,14 @@ packages:
     description: flutter
     source: sdk
     version: "0.0.0"
+  instagram_mention:
+    dependency: "direct main"
+    description:
+      name: instagram_mention
+      sha256: e7fb0d00563eea17a85a29d23229f7cef6d653866f1de92c73fc192d47c5a597
+      url: "https://pub.dev"
+    source: hosted
+    version: "1.0.1"
   lints:
     dependency: transitive
     description:
@@ -115,6 +123,14 @@ packages:
       url: "https://pub.dev"
     source: hosted
     version: "1.8.3"
+  random_text_reveal:
+    dependency: "direct main"
+    description:
+      name: random_text_reveal
+      sha256: "6bbc9f875afff31cad56190e0b44d93b671469865103b2912e52e24d9143f0ef"
+      url: "https://pub.dev"
+    source: hosted
+    version: "0.0.7"
   sky_engine:
     dependency: transitive
     description: flutter
@@ -186,3 +202,4 @@ packages:
     version: "0.3.0"
 sdks:
   dart: ">=3.2.3 <4.0.0"
+  flutter: ">=1.17.0"

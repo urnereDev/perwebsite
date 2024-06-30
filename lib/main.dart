@@ -8,13 +8,9 @@ class MyApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-
-
     return MaterialApp(
       theme: ThemeData(
-          textTheme: Theme.of(context).textTheme.apply(
-            fontFamily: "Poppins"
-          )),
+          textTheme: Theme.of(context).textTheme.apply(fontFamily: "Poppins")),
       home: HomePage(),
     );
   }
