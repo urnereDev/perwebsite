@@ -35,18 +35,16 @@ class _DesktopLayoutState extends State<DesktopLayout> {
                         HeaderTextWidget(
                           size: size,
                         ),
-                        SizedBox(
+                        const SizedBox(
                           height: 20,
                         ),
                         SocialLarge(size: size)
                       ],
                     ),
-                    Expanded(
-                      child: Container(
-                        child: Column(
-                          mainAxisAlignment: MainAxisAlignment.center,
-                          children: [RotatingImageWidget()],
-                        ),
+                    const Expanded(
+                      child: Column(
+                        mainAxisAlignment: MainAxisAlignment.center,
+                        children: [RotatingImageWidget()],
                       ),
                     )
                   ],

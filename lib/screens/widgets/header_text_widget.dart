@@ -3,6 +3,7 @@ import 'package:perwebsite/constants/colors.dart';
 import 'package:perwebsite/screens/widgets/download_cv_widget.dart';
 import 'package:perwebsite/screens/widgets/social_section_widget.dart';
 import 'package:perwebsite/screens/widgets/social_widget.dart';
+import 'package:perwebsite/screens/widgets/text_widget.dart';
 import 'package:simple_gradient_text/simple_gradient_text.dart';
 
 class HeaderTextWidget extends StatelessWidget {
@@ -18,15 +19,17 @@ class HeaderTextWidget extends StatelessWidget {
       ),
       child: Column(
         mainAxisAlignment: MainAxisAlignment.start,
-        crossAxisAlignment: CrossAxisAlignment.start,
+        crossAxisAlignment: size.width > 600
+            ? CrossAxisAlignment.start
+            : CrossAxisAlignment.center,
         children: [
-          Text(
-            "I am Barış",
-            style: TextStyle(
-                fontSize: 26,
-                color: Colors.white,
-                fontWeight: FontWeight.bold,
-                fontFamily: "Poppins"),
+          TextWidget(
+            sSize: size,
+            alignment: TextAlign.center,
+            size: 26,
+            color: Colors.white,
+            fw: FontWeight.bold,
+            text: "I am Barış",
           ),
           GradientText(
             "Flutter & \nFrontend Developer",
@@ -37,12 +40,16 @@ class HeaderTextWidget extends StatelessWidget {
                 fontFamily: "Poppins"),
           ),
           SizedBox(
-            height: size.width * 0.05,
-            child: Text(
-              "I develop cross platform applications using responsive structures.",
-              style: TextStyle(color: Colors.white38),
-            ),
-          ),
+              height: size.width * 0.5,
+              child: TextWidget(
+                sSize: size,
+                alignment: TextAlign.center,
+                size: 16,
+                color: AppColors.fontColor,
+                fw: FontWeight.normal,
+                text:
+                    "I develop cross platform applications using responsive structures.",
+              )),
         ],
       ),
     );
