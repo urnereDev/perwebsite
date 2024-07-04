@@ -21,7 +21,6 @@ class TextWidget extends StatelessWidget {
   Widget build(BuildContext context) {
     return Text(
       overflow: TextOverflow.fade,
-      maxLines: 5,
       softWrap: true,
       "$text",
       textAlign: sSize.width < 600 && alignment != null ? alignment : null,
