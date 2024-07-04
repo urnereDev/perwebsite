@@ -39,7 +39,7 @@ class HeaderTextWidget extends StatelessWidget {
                 fontFamily: "Poppins"),
           ),
           SizedBox(
-              height: size.width * 0.05,
+              width: size.width * 0.5,
               child: TextWidget(
                 sSize: size,
                 alignment: TextAlign.center,
@@ -63,7 +63,6 @@ class SocialLarge extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      padding: EdgeInsets.symmetric(horizontal: size.width * 0.07),
       width: size.width * 0.5,
       child: const Row(
         children: [

@@ -39,7 +39,7 @@ class _MobileLayoutState extends State<MobileLayout> {
                     size: size,
                   ),
                   const SizedBox(
-                    height: 3,
+                    height: 20,
                   ),
                   SocialMobile(size: size)
                 ],
