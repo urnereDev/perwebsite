@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:perwebsite/constants/styles.dart';
+import 'package:perwebsite/screens/widgets/dark_mod_button.dart';
 import 'package:perwebsite/screens/widgets/download_cv_widget.dart';
 import 'package:perwebsite/screens/widgets/header_text_widget.dart';
 import 'package:perwebsite/screens/widgets/rotating_image_widget.dart';
@@ -17,13 +18,14 @@ class _TabletLayoutState extends State<TabletLayout> {
   Widget build(BuildContext context) {
     final size = MediaQuery.of(context).size;
     return Scaffold(
+      backgroundColor: Theme.of(context).colorScheme.primary,
       body: Container(
         height: double.infinity,
         width: double.infinity,
-        decoration: Styles.gradientBoxDecoration,
         child: SingleChildScrollView(
           child: Column(
             children: [
+              const DarkModButton(),
               Container(
                 margin: EdgeInsets.symmetric(vertical: size.height * 0.10),
                 child: Row(

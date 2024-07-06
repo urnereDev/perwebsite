@@ -13,7 +13,7 @@ class DownloadCVWidget extends StatelessWidget {
           color: Colors.transparent,
           borderRadius: BorderRadius.circular(10),
           border: Border.all(color: AppColors.fontColor)),
-      child: Row(
+      child: const Row(
         mainAxisAlignment: MainAxisAlignment.center,
         children: [
           Text(

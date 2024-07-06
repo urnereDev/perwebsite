@@ -1,7 +1,14 @@
 import 'package:flutter/material.dart';
 import 'package:perwebsite/screens/home_page.dart';
+import 'package:perwebsite/screens/widgets/dark_mod_button.dart';
+import 'package:provider/provider.dart';
 
-void main() => runApp(MyApp());
+void main() => runApp(
+      ChangeNotifierProvider(
+        create: (context) => ThemeProvider(),
+        child: MyApp(),
+      ),
+    );
 
 class MyApp extends StatelessWidget {
   const MyApp({super.key});
@@ -9,9 +16,9 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      theme: ThemeData(
-          colorScheme: ColorScheme.fromSeed(seedColor: Colors.black54),
-          useMaterial3: true),
+      theme: lightTheme,
+      darkTheme: darkTheme,
+      themeMode: Provider.of<ThemeProvider>(context).themeMode,
       home: HomePage(),
     );
   }

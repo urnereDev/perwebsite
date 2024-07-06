@@ -26,13 +26,16 @@ class HeaderTextWidget extends StatelessWidget {
             sSize: size,
             alignment: TextAlign.center,
             size: 26,
-            color: Colors.white,
+            color: Theme.of(context).colorScheme.secondary,
             fw: FontWeight.bold,
             text: "I am Barış",
           ),
           GradientText(
             "Flutter & \nFrontend Developer",
-            colors: [Colors.white12, AppColors.fontColor],
+            colors: [
+              Theme.of(context).colorScheme.secondary,
+              AppColors.fontColor
+            ],
             style: TextStyle(
                 fontSize: size.width * 0.040,
                 fontWeight: FontWeight.bold,

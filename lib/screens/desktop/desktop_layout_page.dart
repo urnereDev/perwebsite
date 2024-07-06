@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:perwebsite/constants/styles.dart';
+import 'package:perwebsite/screens/widgets/dark_mod_button.dart';
 import 'package:perwebsite/screens/widgets/header_text_widget.dart';
 import 'package:perwebsite/screens/widgets/rotating_image_widget.dart';
 
@@ -15,13 +16,14 @@ class _DesktopLayoutState extends State<DesktopLayout> {
   Widget build(BuildContext context) {
     Size size = MediaQuery.of(context).size;
     return Scaffold(
+      backgroundColor: Theme.of(context).colorScheme.primary,
       body: Container(
         height: double.infinity,
         width: double.infinity,
-        decoration: Styles.gradientBoxDecoration,
         child: SingleChildScrollView(
           child: Column(
             children: [
+              const DarkModButton(),
               Container(
                 margin: EdgeInsets.symmetric(vertical: size.height * 0.18),
                 child: Row(
@@ -35,7 +37,7 @@ class _DesktopLayoutState extends State<DesktopLayout> {
                         HeaderTextWidget(
                           size: size,
                         ),
-                        SizedBox(
+                        const SizedBox(
                           height: 20,
                         ),
                         SocialLarge(size: size)
@@ -43,7 +45,7 @@ class _DesktopLayoutState extends State<DesktopLayout> {
                     ),
                     Expanded(
                       child: Container(
-                        child: Column(
+                        child: const Column(
                           mainAxisAlignment: MainAxisAlignment.center,
                           children: [RotatingImageWidget()],
                         ),
