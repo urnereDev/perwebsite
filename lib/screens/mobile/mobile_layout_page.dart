@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:perwebsite/constants/styles.dart';
+import 'package:perwebsite/screens/widgets/custom_painter.dart';
 import 'package:perwebsite/screens/widgets/dark_mod_button.dart';
+import 'package:perwebsite/screens/widgets/development_widget.dart';
 import 'package:perwebsite/screens/widgets/download_cv_widget.dart';
 import 'package:perwebsite/screens/widgets/header_text_widget.dart';
 import 'package:perwebsite/screens/widgets/rotating_image_widget.dart';
@@ -46,6 +48,60 @@ class _MobileLayoutState extends State<MobileLayout> {
                   SocialMobile(size: size)
                 ],
               ),
+              Container(
+                margin: EdgeInsets.symmetric(horizontal: size.width * 0.0001),
+                padding: EdgeInsets.symmetric(vertical: 100),
+                child: Column(
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  crossAxisAlignment: CrossAxisAlignment.center,
+                  children: [
+                    Row(
+                      mainAxisAlignment: MainAxisAlignment.center,
+                      crossAxisAlignment: CrossAxisAlignment.center,
+                      children: [
+                        Text("DEVELOPMENT"),
+                        SizedBox(
+                          width: 10,
+                        ),
+                        CustomPaint(
+                          painter: MyCustomPainter(),
+                          size: Size(size.width * 0.5, 1),
+                        ),
+                      ],
+                    ),
+                    SizedBox(
+                      height: 20,
+                    ),
+                    Column(
+                      mainAxisAlignment: MainAxisAlignment.center,
+                      children: [
+                        DevelopmentWidget(
+                          text: "Flutter",
+                          icon: "assets/images/flutter-logo.png",
+                        ),
+                        SizedBox(height: 10),
+                        DevelopmentWidget(
+                          text: "JavaScript",
+                          icon: "assets/images/javascript-3.png",
+                        ),
+                        SizedBox(height: 10),
+                        DevelopmentWidget(
+                          text: "HTML",
+                          icon: "assets/images/html.png",
+                        ),
+                        SizedBox(height: 10),
+                        DevelopmentWidget(
+                          text: "Tailwind CSS",
+                          icon: "assets/images/Tailwind CSS.png",
+                        ),
+                        SizedBox(
+                          height: 50,
+                        )
+                      ],
+                    ),
+                  ],
+                ),
+              )
             ],
           ),
         ),

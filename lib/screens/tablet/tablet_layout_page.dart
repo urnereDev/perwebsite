@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:perwebsite/constants/styles.dart';
+import 'package:perwebsite/screens/widgets/custom_painter.dart';
 import 'package:perwebsite/screens/widgets/dark_mod_button.dart';
+import 'package:perwebsite/screens/widgets/development_widget.dart';
 import 'package:perwebsite/screens/widgets/download_cv_widget.dart';
 import 'package:perwebsite/screens/widgets/header_text_widget.dart';
 import 'package:perwebsite/screens/widgets/rotating_image_widget.dart';
@@ -54,6 +56,65 @@ class _TabletLayoutState extends State<TabletLayout> {
                   ],
                 ),
               ),
+              Container(
+                margin: EdgeInsets.symmetric(horizontal: size.width * 0.07),
+                child: Column(
+                  mainAxisAlignment: MainAxisAlignment.start,
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  children: [
+                    Row(
+                      mainAxisAlignment: MainAxisAlignment.center,
+                      crossAxisAlignment: CrossAxisAlignment.center,
+                      children: [
+                        Text("DEVELOPMENT"),
+                        SizedBox(
+                          width: 10,
+                        ),
+                        CustomPaint(
+                          painter: MyCustomPainter(),
+                          size: Size(size.width * 0.6, 1),
+                        ),
+                      ],
+                    ),
+                    SizedBox(
+                      height: 20,
+                    ),
+                    Column(
+                      mainAxisAlignment: MainAxisAlignment.start,
+                      children: [
+                        Wrap(
+                          direction: Axis.horizontal,
+                          spacing: 10,
+                          runSpacing: 15,
+                          alignment: WrapAlignment.start,
+                          runAlignment: WrapAlignment.spaceBetween,
+                          children: [
+                            DevelopmentWidget(
+                              text: "Flutter",
+                              icon: "assets/images/flutter-logo.png",
+                            ),
+                            DevelopmentWidget(
+                              text: "JavaScript",
+                              icon: "assets/images/javascript-3.png",
+                            ),
+                            DevelopmentWidget(
+                              text: "HTML",
+                              icon: "assets/images/html.png",
+                            ),
+                            DevelopmentWidget(
+                              text: "Tailwind CSS",
+                              icon: "assets/images/Tailwind CSS.png",
+                            ),
+                          ],
+                        ),
+                        SizedBox(
+                          height: 50,
+                        )
+                      ],
+                    ),
+                  ],
+                ),
+              )
             ],
           ),
         ),

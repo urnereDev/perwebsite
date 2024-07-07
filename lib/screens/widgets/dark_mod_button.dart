@@ -7,7 +7,7 @@ ThemeData darkTheme = ThemeData(
     brightness: Brightness.dark,
     colorScheme: ColorScheme.dark(
       primary: AppColors.bgBlack,
-      secondary: AppColors.fontColor,
+      secondary: AppColors.bgLight,
       tertiary: AppColors.bgLight,
     ));
 
@@ -46,7 +46,6 @@ class _DarkModButtonState extends State<DarkModButton> {
   @override
   Widget build(BuildContext context) {
     return IconButton(
-        padding: EdgeInsets.only(top: 5),
         onPressed: () {
           Provider.of<ThemeProvider>(context, listen: false).toggleTheme();
           setState(() {
