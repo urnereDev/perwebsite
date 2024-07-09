@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:perwebsite/constants/styles.dart';
 import 'package:perwebsite/screens/widgets/custom_painter.dart';
 import 'package:perwebsite/screens/widgets/dark_mod_button.dart';
 import 'package:perwebsite/screens/widgets/development_widget.dart';
@@ -57,24 +56,19 @@ class _DesktopLayoutState extends State<DesktopLayout> {
                 ),
               ),
               Container(
+                padding: EdgeInsets.only(top: 40),
                 margin: EdgeInsets.symmetric(horizontal: size.width * 0.07),
                 child: Column(
                   mainAxisAlignment: MainAxisAlignment.start,
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
-                    Row(
-                      mainAxisAlignment: MainAxisAlignment.center,
-                      crossAxisAlignment: CrossAxisAlignment.center,
-                      children: [
-                        Text("DEVELOPMENT"),
-                        SizedBox(
-                          width: 10,
-                        ),
-                        CustomPaint(
-                          painter: MyCustomPainter(),
-                          size: Size(size.width * 0.7, 1),
-                        ),
-                      ],
+                    Text("DEVELOPMENT"),
+                    SizedBox(
+                      width: 10,
+                    ),
+                    CustomPaint(
+                      painter: MyCustomPainter(),
+                      size: Size(size.width * 0.6, 2),
                     ),
                     SizedBox(
                       height: 20,
@@ -105,7 +99,91 @@ class _DesktopLayoutState extends State<DesktopLayout> {
                     ),
                   ],
                 ),
-              )
+              ),
+              SizedBox(
+                height: 50,
+              ),
+              Container(
+                margin: EdgeInsets.symmetric(horizontal: size.width * 0.07),
+                child: Column(
+                  mainAxisAlignment: MainAxisAlignment.start,
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  children: [
+                    Text("APPS"),
+                    SizedBox(
+                      width: 10,
+                    ),
+                    CustomPaint(
+                      painter: MyCustomPainter(),
+                      size: Size(size.width * 0.6, 1),
+                    ),
+                    SizedBox(
+                      height: 20,
+                    ),
+                    Row(
+                      mainAxisAlignment: MainAxisAlignment.start,
+                      children: [
+                        DevelopmentWidget(
+                          text: "VS Code",
+                          icon: "assets/images/vsc.png",
+                        ),
+                        DevelopmentWidget(
+                          text: "Android Studio",
+                          icon: "assets/images/android-studio-icon.png",
+                        ),
+                        DevelopmentWidget(
+                          text: "Visual Studio",
+                          icon: "assets/images/vs.png",
+                        ),
+                        SizedBox(
+                          height: 50,
+                        )
+                      ],
+                    ),
+                  ],
+                ),
+              ),
+              SizedBox(
+                height: 50,
+              ),
+              Container(
+                margin: EdgeInsets.symmetric(horizontal: size.width * 0.07),
+                child: Column(
+                  mainAxisAlignment: MainAxisAlignment.start,
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  children: [
+                    Text("SERVICES"),
+                    CustomPaint(
+                      painter: MyCustomPainter(),
+                      size: Size(size.width * 0.6, 1),
+                    ),
+                    SizedBox(
+                      height: 20,
+                    ),
+                    Row(
+                      mainAxisAlignment: MainAxisAlignment.start,
+                      children: [
+                        DevelopmentWidget(
+                          text: "GitHub",
+                          icon: "assets/images/github.png",
+                        ),
+                        DevelopmentWidget(
+                          text: "Firebase",
+                          icon: "assets/images/firebase.png",
+                        ),
+                        DevelopmentWidget(
+                            text: "Vercel", icon: "assets/images/vercel.png"),
+                        SizedBox(
+                          height: 50,
+                        )
+                      ],
+                    ),
+                  ],
+                ),
+              ),
+              SizedBox(
+                height: 50,
+              ),
             ],
           ),
         ),

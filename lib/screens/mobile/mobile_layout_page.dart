@@ -50,24 +50,18 @@ class _MobileLayoutState extends State<MobileLayout> {
               ),
               Container(
                 margin: EdgeInsets.symmetric(horizontal: size.width * 0.0001),
-                padding: EdgeInsets.symmetric(vertical: 100),
+                padding: EdgeInsets.symmetric(vertical: 20, horizontal: 20),
                 child: Column(
                   mainAxisAlignment: MainAxisAlignment.center,
                   crossAxisAlignment: CrossAxisAlignment.center,
                   children: [
-                    Row(
-                      mainAxisAlignment: MainAxisAlignment.center,
-                      crossAxisAlignment: CrossAxisAlignment.center,
-                      children: [
-                        Text("DEVELOPMENT"),
-                        SizedBox(
-                          width: 10,
-                        ),
-                        CustomPaint(
-                          painter: MyCustomPainter(),
-                          size: Size(size.width * 0.5, 1),
-                        ),
-                      ],
+                    Text("DEVELOPMENT"),
+                    SizedBox(
+                      width: 10,
+                    ),
+                    CustomPaint(
+                      painter: MyCustomPainter(),
+                      size: Size(size.width * 0.4, 1),
                     ),
                     SizedBox(
                       height: 20,
@@ -94,14 +88,100 @@ class _MobileLayoutState extends State<MobileLayout> {
                           text: "Tailwind CSS",
                           icon: "assets/images/Tailwind CSS.png",
                         ),
-                        SizedBox(
-                          height: 50,
-                        )
                       ],
                     ),
                   ],
                 ),
-              )
+              ),
+              SizedBox(
+                height: 10,
+              ),
+              Container(
+                margin: EdgeInsets.symmetric(horizontal: size.width * 0.0001),
+                padding: EdgeInsets.symmetric(vertical: 20, horizontal: 20),
+                child: Column(
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  crossAxisAlignment: CrossAxisAlignment.center,
+                  children: [
+                    Text("APPS"),
+                    SizedBox(
+                      width: 10,
+                    ),
+                    CustomPaint(
+                      painter: MyCustomPainter(),
+                      size: Size(size.width * 0.4, 1),
+                    ),
+                    SizedBox(
+                      height: 20,
+                    ),
+                    Column(
+                      mainAxisAlignment: MainAxisAlignment.center,
+                      children: [
+                        DevelopmentWidget(
+                          text: "VS Code",
+                          icon: "assets/images/vsc.png",
+                        ),
+                        SizedBox(height: 10),
+                        DevelopmentWidget(
+                          text: "Android Studio",
+                          icon: "assets/images/android-studio-icon.png",
+                        ),
+                        SizedBox(height: 10),
+                        DevelopmentWidget(
+                          text: "Visual Studio",
+                          icon: "assets/images/vs.png",
+                        ),
+                      ],
+                    ),
+                  ],
+                ),
+              ),
+              SizedBox(
+                height: 10,
+              ),
+              Container(
+                margin: EdgeInsets.symmetric(horizontal: size.width * 0.0001),
+                padding: EdgeInsets.symmetric(vertical: 20, horizontal: 20),
+                child: Column(
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  crossAxisAlignment: CrossAxisAlignment.center,
+                  children: [
+                    Text("SERVICES"),
+                    SizedBox(
+                      width: 10,
+                    ),
+                    CustomPaint(
+                      painter: MyCustomPainter(),
+                      size: Size(size.width * 0.4, 1),
+                    ),
+                    SizedBox(
+                      height: 20,
+                    ),
+                    Column(
+                      mainAxisAlignment: MainAxisAlignment.center,
+                      children: [
+                        DevelopmentWidget(
+                          text: "GitHub",
+                          icon: "assets/images/github.png",
+                        ),
+                        SizedBox(height: 10),
+                        DevelopmentWidget(
+                          text: "Firebase",
+                          icon: "assets/images/firebase.png",
+                        ),
+                        SizedBox(
+                          height: 10,
+                        ),
+                        DevelopmentWidget(
+                            text: "Vercel", icon: "assets/images/vercel.png"),
+                      ],
+                    ),
+                  ],
+                ),
+              ),
+              SizedBox(
+                height: 10,
+              ),
             ],
           ),
         ),

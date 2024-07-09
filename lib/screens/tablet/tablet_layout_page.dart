@@ -62,19 +62,13 @@ class _TabletLayoutState extends State<TabletLayout> {
                   mainAxisAlignment: MainAxisAlignment.start,
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
-                    Row(
-                      mainAxisAlignment: MainAxisAlignment.center,
-                      crossAxisAlignment: CrossAxisAlignment.center,
-                      children: [
-                        Text("DEVELOPMENT"),
-                        SizedBox(
-                          width: 10,
-                        ),
-                        CustomPaint(
-                          painter: MyCustomPainter(),
-                          size: Size(size.width * 0.6, 1),
-                        ),
-                      ],
+                    Text("DEVELOPMENT"),
+                    SizedBox(
+                      width: 10,
+                    ),
+                    CustomPaint(
+                      painter: MyCustomPainter(),
+                      size: Size(size.width * 0.6, 1),
                     ),
                     SizedBox(
                       height: 20,
@@ -107,6 +101,103 @@ class _TabletLayoutState extends State<TabletLayout> {
                             ),
                           ],
                         ),
+                      ],
+                    ),
+                  ],
+                ),
+              ),
+              SizedBox(
+                height: 50,
+              ),
+              Container(
+                margin: EdgeInsets.symmetric(horizontal: size.width * 0.07),
+                child: Column(
+                  mainAxisAlignment: MainAxisAlignment.start,
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  children: [
+                    Text("APPS"),
+                    SizedBox(
+                      width: 10,
+                    ),
+                    CustomPaint(
+                      painter: MyCustomPainter(),
+                      size: Size(size.width * 0.6, 1),
+                    ),
+                    SizedBox(
+                      height: 20,
+                    ),
+                    Column(
+                      mainAxisAlignment: MainAxisAlignment.start,
+                      children: [
+                        Wrap(
+                          direction: Axis.horizontal,
+                          spacing: 10,
+                          runSpacing: 15,
+                          alignment: WrapAlignment.start,
+                          runAlignment: WrapAlignment.spaceBetween,
+                          children: [
+                            DevelopmentWidget(
+                              text: "VS Code",
+                              icon: "assets/images/vsc.png",
+                            ),
+                            DevelopmentWidget(
+                              text: "Android Studio",
+                              icon: "assets/images/android-studio-icon.png",
+                            ),
+                            DevelopmentWidget(
+                              text: "Visual Studio",
+                              icon: "assets/images/vs.png",
+                            ),
+                          ],
+                        ),
+                      ],
+                    ),
+                  ],
+                ),
+              ),
+              SizedBox(
+                height: 50,
+              ),
+              Container(
+                margin: EdgeInsets.symmetric(horizontal: size.width * 0.07),
+                child: Column(
+                  mainAxisAlignment: MainAxisAlignment.start,
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  children: [
+                    Text("SERVICES"),
+                    SizedBox(
+                      width: 10,
+                    ),
+                    CustomPaint(
+                      painter: MyCustomPainter(),
+                      size: Size(size.width * 0.6, 1),
+                    ),
+                    SizedBox(
+                      height: 20,
+                    ),
+                    Column(
+                      mainAxisAlignment: MainAxisAlignment.start,
+                      children: [
+                        Wrap(
+                          direction: Axis.horizontal,
+                          spacing: 10,
+                          runSpacing: 15,
+                          alignment: WrapAlignment.start,
+                          runAlignment: WrapAlignment.spaceBetween,
+                          children: [
+                            DevelopmentWidget(
+                              text: "GitHub",
+                              icon: "assets/images/github.png",
+                            ),
+                            DevelopmentWidget(
+                              text: "Firebase",
+                              icon: "assets/images/firebase.png",
+                            ),
+                            DevelopmentWidget(
+                                text: "Vercel",
+                                icon: "assets/images/vercel.png"),
+                          ],
+                        ),
                         SizedBox(
                           height: 50,
                         )
@@ -114,7 +205,10 @@ class _TabletLayoutState extends State<TabletLayout> {
                     ),
                   ],
                 ),
-              )
+              ),
+              SizedBox(
+                height: 50,
+              ),
             ],
           ),
         ),

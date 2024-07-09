@@ -25,9 +25,11 @@ class DevelopmentWidget extends StatelessWidget {
         mainAxisAlignment: MainAxisAlignment.start,
         crossAxisAlignment: CrossAxisAlignment.center,
         children: [
-          ImageIcon(
-            AssetImage(icon),
-            color: color,
+          Image.asset(
+            width: 25,
+            height: 25,
+            icon,
+            color: color, // İsteğe bağlı renk ayarı
           ),
           SizedBox(
             width: 20,
