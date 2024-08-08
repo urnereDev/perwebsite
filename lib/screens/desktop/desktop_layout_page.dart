@@ -56,24 +56,24 @@ class _DesktopLayoutState extends State<DesktopLayout> {
                 ),
               ),
               Container(
-                padding: EdgeInsets.only(top: 40),
+                padding: const EdgeInsets.only(top: 40),
                 margin: EdgeInsets.symmetric(horizontal: size.width * 0.07),
                 child: Column(
                   mainAxisAlignment: MainAxisAlignment.start,
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
-                    Text("DEVELOPMENT"),
-                    SizedBox(
+                    const Text("DEVELOPMENT"),
+                    const SizedBox(
                       width: 10,
                     ),
                     CustomPaint(
                       painter: MyCustomPainter(),
                       size: Size(size.width * 0.6, 2),
                     ),
-                    SizedBox(
+                    const SizedBox(
                       height: 20,
                     ),
-                    Row(
+                    const Row(
                       mainAxisAlignment: MainAxisAlignment.start,
                       children: [
                         DevelopmentWidget(
@@ -100,7 +100,7 @@ class _DesktopLayoutState extends State<DesktopLayout> {
                   ],
                 ),
               ),
-              SizedBox(
+              const SizedBox(
                 height: 50,
               ),
               Container(
@@ -109,18 +109,18 @@ class _DesktopLayoutState extends State<DesktopLayout> {
                   mainAxisAlignment: MainAxisAlignment.start,
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
-                    Text("APPS"),
-                    SizedBox(
+                    const Text("APPS"),
+                    const SizedBox(
                       width: 10,
                     ),
                     CustomPaint(
                       painter: MyCustomPainter(),
                       size: Size(size.width * 0.6, 1),
                     ),
-                    SizedBox(
+                    const SizedBox(
                       height: 20,
                     ),
-                    Row(
+                    const Row(
                       mainAxisAlignment: MainAxisAlignment.start,
                       children: [
                         DevelopmentWidget(
@@ -143,7 +143,7 @@ class _DesktopLayoutState extends State<DesktopLayout> {
                   ],
                 ),
               ),
-              SizedBox(
+              const SizedBox(
                 height: 50,
               ),
               Container(
@@ -152,15 +152,15 @@ class _DesktopLayoutState extends State<DesktopLayout> {
                   mainAxisAlignment: MainAxisAlignment.start,
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
-                    Text("SERVICES"),
+                    const Text("SERVICES"),
                     CustomPaint(
                       painter: MyCustomPainter(),
                       size: Size(size.width * 0.6, 1),
                     ),
-                    SizedBox(
+                    const SizedBox(
                       height: 20,
                     ),
-                    Row(
+                    const Row(
                       mainAxisAlignment: MainAxisAlignment.start,
                       children: [
                         DevelopmentWidget(
@@ -181,7 +181,7 @@ class _DesktopLayoutState extends State<DesktopLayout> {
                   ],
                 ),
               ),
-              SizedBox(
+              const SizedBox(
                 height: 50,
               ),
             ],

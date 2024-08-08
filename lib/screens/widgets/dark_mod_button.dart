@@ -8,7 +8,7 @@ import 'package:shared_preferences/shared_preferences.dart';
 ThemeData darkTheme = ThemeData(
   useMaterial3: true,
   brightness: Brightness.dark,
-  colorScheme: ColorScheme.dark(
+  colorScheme: const ColorScheme.dark(
     primary: AppColors.bgBlack,
     secondary: AppColors.bgLight,
     tertiary: AppColors.bgLight,
@@ -18,7 +18,7 @@ ThemeData darkTheme = ThemeData(
 ThemeData lightTheme = ThemeData(
   useMaterial3: true,
   brightness: Brightness.light,
-  colorScheme: ColorScheme.light(
+  colorScheme: const ColorScheme.light(
     primary: AppColors.bgLight,
     secondary: AppColors.bgBlack,
     tertiary: AppColors.fontColor,
