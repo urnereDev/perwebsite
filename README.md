@@ -1,16 +1,25 @@
-# perwebsite
+# Flutter Kişisel Web Sitesi
 
-A new Flutter project.
+Bu proje, Flutter kullanılarak geliştirilmiş modern ve özelleştirilebilir bir kişisel web sitesi uygulamasıdır.
 
-## Getting Started
+## 🚀 Özellikler
 
-This project is a starting point for a Flutter application.
+- 🌓 Açık ve koyu tema desteği
+- 📱 Responsive tasarım
+- 🔧 Provider ile durum yönetimi
+- 🎨 Özelleştirilebilir içerik ve tasarım
+- 📄 Ana sayfa, projeler, hakkımda ve iletişim sayfaları
 
-A few resources to get you started if this is your first Flutter project:
+## 🛠️ Kullanılan Teknolojiler
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
+- Flutter
+- Dart
+- Provider
 
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+## 🚀 Başlangıç
+
+Projeyi yerel makinenizde çalıştırmak için:
+
+1. Bu repoyu klonlayın
+2. `flutter pub get` komutunu çalıştırın
+3. `flutter run -d chrome` ile web tarayıcısında çalıştırın
